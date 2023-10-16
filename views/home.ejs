@@ -1,0 +1,15 @@
+<%- include("Layouts/header.ejs") -%>
+
+<h2>Main blog</h2>
+<p><%= content %></p>
+<div class="blogs">
+    <% blogsContent.forEach((blog)=>{ %>
+        <h2><%= blog.postTitle %></h2>
+        <div class="d-flex">
+            <p class="pe-2"><%= blog.postContent.substr(0, 100) + "... " %></p>
+            <a href="/posts/<%= blog._id %>">Read More</a>
+        </div>
+    <% }) %>
+</div>
+
+<%- include("Layouts/footer.ejs") -%>

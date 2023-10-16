@@ -1,0 +1,17 @@
+<%- include("Layouts/header.ejs") -%>
+
+<h2>Compose</h2>
+<form action="/compose" method="post">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" id="title" name="postTitle" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label for="content" class="form-label">Content</label>
+        <textarea name="postContent" id="content" cols="30" rows="5" class="form-control"></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Publish</button>
+</form>
+
+<%- include("Layouts/footer.ejs") -%>
